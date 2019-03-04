@@ -1,6 +1,6 @@
 <?php
 
-namespace human\yii2\oauth2server;
+namespace eartotheground\yii2\oauth2server;
 
 trait BootstrapTrait
 {
@@ -8,33 +8,33 @@ trait BootstrapTrait
      * @var array Model's map
      */
     private $_modelMap = [
-        'OauthClients'               => 'human\yii2\oauth2server\models\OauthClients',
-        'OauthAccessTokens'          => 'human\yii2\oauth2server\models\OauthAccessTokens',
-        'OauthAuthorizationCodes'    => 'human\yii2\oauth2server\models\OauthAuthorizationCodes',
-        'OauthRefreshTokens'         => 'human\yii2\oauth2server\models\OauthRefreshTokens',
-        'OauthScopes'                => 'human\yii2\oauth2server\models\OauthScopes',
+        'OauthClients'               => 'eartotheground\yii2\oauth2server\models\OauthClients',
+        'OauthAccessTokens'          => 'eartotheground\yii2\oauth2server\models\OauthAccessTokens',
+        'OauthAuthorizationCodes'    => 'eartotheground\yii2\oauth2server\models\OauthAuthorizationCodes',
+        'OauthRefreshTokens'         => 'eartotheground\yii2\oauth2server\models\OauthRefreshTokens',
+        'OauthScopes'                => 'eartotheground\yii2\oauth2server\models\OauthScopes',
     ];
     
     /**
      * @var array Storage's map
      */
     private $_storageMap = [
-        'access_token'          => 'human\yii2\oauth2server\storage\Pdo',
-        'authorization_code'    => 'human\yii2\oauth2server\storage\Pdo',
-        'client_credentials'    => 'human\yii2\oauth2server\storage\Pdo',
-        'client'                => 'human\yii2\oauth2server\storage\Pdo',
-        'refresh_token'         => 'human\yii2\oauth2server\storage\Pdo',
-        'user_credentials'      => 'human\yii2\oauth2server\storage\Pdo',
-        'public_key'            => 'human\yii2\oauth2server\storage\Pdo',
-        'jwt_bearer'            => 'human\yii2\oauth2server\storage\Pdo',
-        'scope'                 => 'human\yii2\oauth2server\storage\Pdo',
+        'access_token'          => 'eartotheground\yii2\oauth2server\storage\Pdo',
+        'authorization_code'    => 'eartotheground\yii2\oauth2server\storage\Pdo',
+        'client_credentials'    => 'eartotheground\yii2\oauth2server\storage\Pdo',
+        'client'                => 'eartotheground\yii2\oauth2server\storage\Pdo',
+        'refresh_token'         => 'eartotheground\yii2\oauth2server\storage\Pdo',
+        'user_credentials'      => 'eartotheground\yii2\oauth2server\storage\Pdo',
+        'public_key'            => 'eartotheground\yii2\oauth2server\storage\Pdo',
+        'jwt_bearer'            => 'eartotheground\yii2\oauth2server\storage\Pdo',
+        'scope'                 => 'eartotheground\yii2\oauth2server\storage\Pdo',
     ];
     
     protected function initModule(Module $module)
     {
         $this->_modelMap = array_merge($this->_modelMap, $module->modelMap);
         foreach ($this->_modelMap as $name => $definition) {
-            \Yii::$container->set("human\\yii2\\oauth2server\\models\\" . $name, $definition);
+            \Yii::$container->set("eartotheground\\yii2\\oauth2server\\models\\" . $name, $definition);
             $module->modelMap[$name] = is_array($definition) ? $definition['class'] : $definition;
         }
 
