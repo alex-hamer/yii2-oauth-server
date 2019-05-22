@@ -1,6 +1,6 @@
 <?php
 
-namespace eartotheground\yii2\oauth2server\models;
+namespace mosaic\yii2\oauth2server\models;
 
 use Yii;
 

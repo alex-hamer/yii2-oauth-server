@@ -1,6 +1,6 @@
 <?php
 
-namespace eartotheground\yii2\oauth2server;
+namespace mosaic\yii2\oauth2server;
 
 class Response extends \OAuth2\Response
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace eartotheground\yii2\oauth2server\filters\auth;
+namespace mosaic\yii2\oauth2server\filters\auth;
 
-use eartotheground\yii2\oauth2server\Module;
+use mosaic\yii2\oauth2server\Module;
 
 class CompositeAuth extends \yii\filters\auth\CompositeAuth
 {

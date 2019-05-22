@@ -1,10 +1,10 @@
 <?php
 
-namespace eartotheground\yii2\oauth2server\controllers;
+namespace mosaic\yii2\oauth2server\controllers;
 
 use Yii;
 use yii\helpers\ArrayHelper;
-use eartotheground\yii2\oauth2server\filters\ErrorToExceptionFilter;
+use mosaic\yii2\oauth2server\filters\ErrorToExceptionFilter;
 
 class DefaultController extends \yii\rest\Controller
 {

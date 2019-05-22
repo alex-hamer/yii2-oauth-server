@@ -1,6 +1,6 @@
 <?php
 
-namespace eartotheground\yii2\oauth2server\storage;
+namespace mosaic\yii2\oauth2server\storage;
 
 class Pdo extends \OAuth2\Storage\Pdo
 {

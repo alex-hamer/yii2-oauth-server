@@ -1,13 +1,13 @@
 <?php
 
-namespace eartotheground\yii2\oauth2server;
+namespace mosaic\yii2\oauth2server;
 
 class Server extends \OAuth2\Server
 {
     use traits\ClassNamespace;
     
     /**
-     * @var \eartotheground\yii2\oauth2server\Module
+     * @var \mosaic\yii2\oauth2server\Module
      */
     protected $module;
     
